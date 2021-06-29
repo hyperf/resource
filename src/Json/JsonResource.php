@@ -171,9 +171,10 @@ class JsonResource implements ArrayAccess, JsonSerializable, Arrayable, Jsonable
     /**
      * Disable wrapping of the outer-most resource array.
      */
-    public function withoutWrapping()
+    public function withoutWrapping(): JsonResource
     {
         $this->wrap = null;
+        return $this;
     }
 
     /**
